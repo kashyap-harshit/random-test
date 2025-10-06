@@ -21,14 +21,8 @@ export default function Ref2() {
       </p>
       <div className="flex flex-col  justify-center w-full items-center gap-3">
         <button
-          onClick={() => setCount(count + 1)}
-          className="px-3 py-2 bg-blue-500 text-white rounded mr-2 max-w-[200px]"
-        >
-          Usestate Increment
-        </button>
-        <button
-          onClick={() => {
-            useRefWalaCount.current += 1;
+          onClick={() => {setCount(count + 1)
+            console.log("usestate : ",count + 1)
           }}
           className="px-3 py-2 bg-blue-500 text-white rounded mr-2 max-w-[200px]"
         >
@@ -36,8 +30,17 @@ export default function Ref2() {
         </button>
         <button
           onClick={() => {
+            useRefWalaCount.current += 1;
+            console.log("useref : ",useRefWalaCount.current)
+          }}
+          className="px-3 py-2 bg-blue-500 text-white rounded mr-2 max-w-[200px]"
+        >
+          UseRef Increment
+        </button>
+        <button
+          onClick={() => {
             normalCount+=1;
-            console.log(normalCount)
+            console.log("normal : ",normalCount)
           }}
           className="px-3 py-2 bg-blue-500 text-white rounded mr-2 max-w-[200px]"
         >
